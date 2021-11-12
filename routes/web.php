@@ -17,10 +17,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+// Los closures o funciones sin nombre raramente se usan en el enrutador.
 /*
 Route::get('/hola', function() {
     return "Hola, mundo !!!!!";
 });
 */
 
-Route::get('/hola', 'HolaController@index');
+// Route::get('/hola{}', 'HolaController@index');
+
+Route::get('/hola/{nombre}', 'HolaController@show');
